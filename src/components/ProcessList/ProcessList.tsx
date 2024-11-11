@@ -27,7 +27,6 @@ const ProcessList: React.FC<ProcessListProps> = ({
   
   const addSubprocessToBackend = async (parentProcessId: string, subprocess: ProcessT) => {
     try {
-      debugger
       const response = await fetch(`${process.env.REACT_APP_API_URL_}/processes/addSubprocessToProcess`, {
         method: 'POST',
         headers: {
@@ -67,7 +66,6 @@ const ProcessList: React.FC<ProcessListProps> = ({
   };
 
   const renderProcesses = (processes: ProcessT[], path: string[]) => {
-    debugger
     return processes.map((process, index) => (
       <div key={process._id} style={{ marginLeft: `${path.length * 20}px` }}>
         <div

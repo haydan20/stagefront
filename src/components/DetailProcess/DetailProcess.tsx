@@ -9,7 +9,6 @@ type ProcessDetailProps = {
 
 
 const ProcessDetail: React.FC<ProcessDetailProps> = ({ process, updateProcessDetail, saveDetails }) => {
-  debugger
   return (
     <div className="card mb-4  border-0">
       <div className="card-header bg-white">

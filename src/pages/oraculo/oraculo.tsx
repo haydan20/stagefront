@@ -12,7 +12,7 @@ const Oraculo: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Simulated API call
+
   const getAnswer = async (area: string, question: string) => {
     const objAreas = areas.filter((x) => x.name === selectedArea);
 
@@ -31,7 +31,7 @@ const Oraculo: React.FC = () => {
     return await response.json();
   };
 
-  // Função para obter as áreas do backend
+
   const fetchAreas = async () => {
     try {
       const response = await fetch(`${process.env.REACT_APP_API_URL_}/areas`);
@@ -45,7 +45,7 @@ const Oraculo: React.FC = () => {
     }
   };
 
-  // Efeito para carregar as áreas ao montar o componente
+
   useEffect(() => {
     fetchAreas();
   }, []);

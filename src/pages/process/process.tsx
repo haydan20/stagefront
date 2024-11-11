@@ -31,7 +31,6 @@ const ProcessMap: React.FC = () => {
 
   // Adiciona um processo na área 
   const addProcess = async (areaId: string, processT: ProcessT) => {
-    debugger
     try {
       // Enviando o processo para o backend via POST
       const response = await fetch(`${process.env.REACT_APP_API_URL_}/api/processes/`, {
@@ -53,7 +52,6 @@ const ProcessMap: React.FC = () => {
 
       setAreas(
         areas.map((area) => {
-          debugger
           if (area._id === areaId) {
             return { ...area, processes: [...area.processes, updatedArea.processes[updatedArea.processes.length - 1]] };
           }
@@ -140,9 +138,7 @@ const ProcessMap: React.FC = () => {
 
 
   const updateProcessRecursively = (processes: ProcessT[], processId: string, updatedProcess: Partial<ProcessT>): ProcessT[] => {
-    debugger
     return processes.map((process) => {
-      debugger
       if (process._id === processId) {
         return { ...process, ...updatedProcess };
       }
@@ -171,7 +167,6 @@ const ProcessMap: React.FC = () => {
   };
 
   const removeProcessRecursively = (processes: ProcessT[], processId: string): ProcessT[] => {
-    debugger
     return processes.filter((process) => {
       if (process._id === processId) {
         return false;
@@ -196,7 +191,6 @@ const ProcessMap: React.FC = () => {
   };
 
   const moveProcess = (processId: string, direction: 'up' | 'down') => {
-    debugger
     setAreas(
       areas.map((area) => {
         if (area._id === selectedArea) {
@@ -211,7 +205,6 @@ const ProcessMap: React.FC = () => {
   };
 
   const moveProcessRecursively = (processes: ProcessT[], processId: string, direction: 'up' | 'down'): ProcessT[] => {
-    debugger
     const index = processes.findIndex(p => p._id === processId);
     if (index !== -1) {
       const newProcesses = [...processes];
@@ -226,12 +219,10 @@ const ProcessMap: React.FC = () => {
   };
 
   const updateProcessDetail = (field: string, value: string) => {
-    debugger
     if (selectedProcessPath) {
       setAreas(
         areas.map((area) => {
           if (area._id === selectedArea) {
-            debugger
             return {
               ...area,
               processes: updateProcessRecursively(area.processes, selectedProcessPath[selectedProcessPath.length - 1], { [field]: value }),
