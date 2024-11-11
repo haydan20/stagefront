@@ -48,7 +48,7 @@ const ProcessDetail: React.FC<ProcessDetailProps> = ({ process, updateProcessDet
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="documentation" className="form-label">Documentação</label>
+            <label htmlFor="documentation" className="form-label">Documentação (links)</label>
             <textarea
               className="form-control"
               id="documentation"

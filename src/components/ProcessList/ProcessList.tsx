@@ -67,6 +67,7 @@ const ProcessList: React.FC<ProcessListProps> = ({
 
   const renderProcesses = (processes: ProcessT[], path: string[]) => {
     return processes.map((process, index) => (
+      
       <div key={process._id} style={{ marginLeft: `${path.length * 20}px` }}>
         <div
           className={`d-flex align-items-center p-2 ${selectedProcessPath?.includes(process._id) ? "bg-light" : ""}`}
@@ -165,7 +166,8 @@ const ProcessList: React.FC<ProcessListProps> = ({
     ));
   };
 
-  return <>{renderProcesses(processes, [])}</>;
+  return <>
+  {renderProcesses(processes, [])}</>;
 };
 
 export default ProcessList;
