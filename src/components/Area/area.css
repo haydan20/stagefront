@@ -1,0 +1,12 @@
+.btn-area-verprocessos:hover {
+    color: white;
+    background-color: black;
+    border-color: black;
+  }
+
+  .btn-area-verprocessos {
+    color: white;
+    background-color: rgb(57 57 57);
+    border-color:  rgb(57 57 57);
+    font-size: 14px;
+  }

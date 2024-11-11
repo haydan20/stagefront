@@ -1,0 +1,65 @@
+/* Oraculo.css */
+
+.oraculo-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .oraculo-title {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+  
+  .oraculo-card {
+    border: none;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .oraculo-label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .oraculo-select,
+  .oraculo-textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .oraculo-btn {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .oraculo-btn:hover {
+    background-color: #555;
+  }
+  
+  .oraculo-alert {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    border-radius: 4px;
+  }
+  
+  .oraculo-answer-card {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .oraculo-answer-text {
+    color: #333;
+    font-weight: 400;
+  }
+  
