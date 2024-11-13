@@ -64,10 +64,10 @@ const Areas: React.FC<AreasProps> = ({ areas, setAreas, setSelectedArea }) => {
     }
   };
 
-  
+
   useEffect(() => {
     fetchAreas();
-  }, []); 
+  }, []);
 
   return (
     <div className="card mb-4  border-0">
@@ -123,10 +123,17 @@ const Areas: React.FC<AreasProps> = ({ areas, setAreas, setSelectedArea }) => {
           </thead>
           <tbody>
             {paginatedAreas.map((area) => (
+
               <tr key={area._id}>
                 <td>{area.name}</td>
                 <td>
-                  <button className="btn btn-area-verprocessos" onClick={() => setSelectedArea(area._id)}>
+                  <button
+                    className="btn btn-area-verprocessos"
+                    onClick={() => {
+                     debugger
+                      setSelectedArea(area._id);
+                    }}
+                  >
                     Ver Processos
                   </button>
                 </td>
@@ -141,7 +148,7 @@ const Areas: React.FC<AreasProps> = ({ areas, setAreas, setSelectedArea }) => {
             disabled={currentPage === 1}
           >
             <ChevronLeft size={16} className="me-2" />
-            
+
           </button>
           <span> {currentPage} de {totalPages}</span>
           <button
@@ -149,7 +156,7 @@ const Areas: React.FC<AreasProps> = ({ areas, setAreas, setSelectedArea }) => {
             onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
             disabled={currentPage === totalPages}
           >
-            
+
             <ChevronRight size={16} className="ms-2" />
           </button>
         </div>

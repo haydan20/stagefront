@@ -66,6 +66,7 @@ const ProcessList: React.FC<ProcessListProps> = ({
   };
 
   const renderProcesses = (processes: ProcessT[], path: string[]) => {
+    debugger
     return processes.map((process, index) => (
       
       <div key={process._id} style={{ marginLeft: `${path.length * 20}px` }}>
@@ -138,6 +139,7 @@ const ProcessList: React.FC<ProcessListProps> = ({
                   tools: "",
                   responsible: "",
                   documentation: "",
+                  description:"",
                   isSystemic: false,
                 };
                 addSubprocessToBackend(process._id, newSubprocess);

@@ -23,7 +23,7 @@ const ProcessDetail: React.FC<ProcessDetailProps> = ({ process, updateProcessDet
               type="text"
               className="form-control"
               id="process-name"
-              value={process.name}
+              value={process?.name}
               onChange={(e) => updateProcessDetail('name', e.target.value)}
             />
           </div>
@@ -33,7 +33,7 @@ const ProcessDetail: React.FC<ProcessDetailProps> = ({ process, updateProcessDet
               type="text"
               className="form-control"
               id="tools"
-              value={process.tools}
+              value={process?.tools}
               onChange={(e) => updateProcessDetail('tools', e.target.value)}
             />
           </div>
@@ -43,7 +43,7 @@ const ProcessDetail: React.FC<ProcessDetailProps> = ({ process, updateProcessDet
               type="text"
               className="form-control"
               id="responsible"
-              value={process.responsible}
+              value={process?.responsible}
               onChange={(e) => updateProcessDetail('responsible', e.target.value)}
             />
           </div>
@@ -52,8 +52,17 @@ const ProcessDetail: React.FC<ProcessDetailProps> = ({ process, updateProcessDet
             <textarea
               className="form-control"
               id="documentation"
-              value={process.documentation}
+              value={process?.documentation}
               onChange={(e) => updateProcessDetail('documentation', e.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="documentation" className="form-label">Descrição</label>
+            <textarea
+              className="form-control"
+              id="description"
+              value={process?.description}
+              onChange={(e) => updateProcessDetail('description', e.target.value)}
             />
           </div>
           <div className="mb-3 form-check">
@@ -61,13 +70,13 @@ const ProcessDetail: React.FC<ProcessDetailProps> = ({ process, updateProcessDet
               type="checkbox"
               className="form-check-input"
               id="process-systemic"
-              checked={process.isSystemic}
+              checked={process?.isSystemic}
               onChange={(e) => updateProcessDetail('isSystemic', e.target.checked ? 'true' : 'false')}
             />
             <label className="form-check-label" htmlFor="process-systemic">Processo Sistemico</label>
           </div>
           <div className="mb-3">
-            <button className='btn btn-primary' onClick={() => saveDetails()}> Salvar</button>
+            <button className='btn bg-black text-white' onClick={() => saveDetails()}> Salvar</button>
           </div>
         </div>
       </div>

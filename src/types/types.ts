@@ -5,6 +5,7 @@ export type ProcessT = {
   tools: string;
   responsible: string;
   documentation: string;
+  description:string;
   isSystemic: boolean;
 };
 

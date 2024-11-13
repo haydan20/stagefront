@@ -280,6 +280,7 @@ const ProcessMap: React.FC = () => {
                                 tools: "",
                                 responsible: "",
                                 documentation: "",
+                                description:"",
                                 isSystemic: false,
                               });
                               (e.target as HTMLInputElement).value = "";
@@ -297,6 +298,7 @@ const ProcessMap: React.FC = () => {
                               tools: "",
                               responsible: "",
                               documentation: "",
+                              description:"",
                               isSystemic: false,
                             });
                             input.value = "";
