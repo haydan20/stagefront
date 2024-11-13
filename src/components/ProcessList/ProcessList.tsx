@@ -51,7 +51,7 @@ const ProcessList: React.FC<ProcessListProps> = ({
   // Função para remover um processo no backend
   const removeProcessFromBackend = async (processId: string) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL_}/api/processes/${processId}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL_}/processes/${processId}`, {
         method: 'DELETE',
       });
 

@@ -33,7 +33,7 @@ const ProcessMap: React.FC = () => {
   const addProcess = async (areaId: string, processT: ProcessT) => {
     try {
       // Enviando o processo para o backend via POST
-      const response = await fetch(`${process.env.REACT_APP_API_URL_}/api/processes/`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL_}/processes/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
